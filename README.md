@@ -36,7 +36,8 @@ prepare the a list of word tuples. and then call the function
 ```python
 text = open(path.join(d, 'examples/constitution.txt')).read()
 words = easywordcloud.process_text(text)
-words = [(word, math.sqrt(weight)) for word, weight in words]  # to makes the weight more even
+# to makes the weight more even
+words = [(word, math.sqrt(weight)) for word, weight in words]  
 easywordcloud.draw_word_cloud(words, width, height, 'examples/constitution.png')
 ```
 output:
@@ -45,7 +46,9 @@ output:
 ```python
 text = open(path.join(d, 'examples/alice.txt')).read()
 words = easywordcloud.process_text(text)
-easywordcloud.draw_word_cloud(words, width, height,  'examples/alice.png', '/Library/Fonts/Andale Mono.ttf')
+easywordcloud.draw_word_cloud(words, width, height, 
+                              'examples/alice.png', 
+                              '/Library/Fonts/Andale Mono.ttf')
 ```
 output:
 ![Alice in Wonderland](examples/alice.png)
