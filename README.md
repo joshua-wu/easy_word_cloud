@@ -43,7 +43,7 @@ easywordcloud.draw_word_cloud(words, width, height, 'examples/constitution.png')
 output:
 ![American Constitution](examples/constitution.png)
 
-**englih with other fonts**
+**Englih with font *Andale Mono***
 ```python
 text = open(path.join(d, 'examples/alice.txt')).read()
 words = easywordcloud.process_text(text)
