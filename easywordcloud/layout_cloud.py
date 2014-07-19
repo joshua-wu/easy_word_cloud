@@ -25,13 +25,13 @@ def get_default_font():
     highly recommend you prepare the fonts youself instead of using this function"""
     if _platform == "linux" or _platform == "linux2":
         # linux, sorry, i dont know much
-        FONT_PATH = None
+        FONT_PATH = '/usr/share/fonts/truetype/droid/DroidSansMono.ttf'
     elif _platform == "darwin":
         # OS X
         FONT_PATH = "/Library/Fonts/hei.ttf"
     elif _platform == "win32":
         # Windows...
-        FONT_PATH = "c:/windows/fonts/simhei.ttf"
+        FONT_PATH = "c:/windows/fonts/msyh.ttf"
 
     return FONT_PATH
 
@@ -72,7 +72,8 @@ def draw_word_cloud(words, width=800, height=600, output_file_name=None, font_pa
     for font_scale in [0.1, 0.5, 1, 2, 5, 10, 20, 50]:
         elements, score, fill_rate, show_rate = fit_words(
             words, width=width, height=height, margin=2, scale=font_scale)
-        print('scale:', font_scale, 'score:', score, 'show_rate:', show_rate, 'fille_rate:', fill_rate)
+        if debug >= 1:
+            print('scale:', font_scale, 'score:', score, 'show_rate:', show_rate, 'fille_rate:', fill_rate)
         if score > best_score:
             best_elements, best_score = elements, score
         if score == 0.0:
