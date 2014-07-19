@@ -32,7 +32,7 @@ Install the package:
 
 ##How to draw a word cloud?
 prepare the a list of word tuples. and then call the function
-⋅⋅* English
+**English**
 ```python
 text = open(path.join(d, 'examples/constitution.txt')).read()
 words = easywordcloud.process_text(text)
@@ -43,6 +43,7 @@ easywordcloud.draw_word_cloud(words, width, height, 'examples/constitution.png')
 output:
 ![American Constitution](examples/constitution.png)
 
+**englih with other fonts**
 ```python
 text = open(path.join(d, 'examples/alice.txt')).read()
 words = easywordcloud.process_text(text)
@@ -53,7 +54,7 @@ easywordcloud.draw_word_cloud(words, width, height,
 output:
 ![Alice in Wonderland](examples/alice.png)
 
-⋅⋅* Chinese:
+**Chinese**
 ```python
 words = [(u'标签', 3), (u'云', 2)]
 easywordcloud.draw_word_cloud(words, width, height,  'examples/chinese.png', None)
@@ -61,7 +62,7 @@ easywordcloud.draw_word_cloud(words, width, height,  'examples/chinese.png', Non
 output:
 ![Chinese](examples/chinese.png)
 
-⋅⋅* Japanness
+**Japanness**
 ```python
 words = [(u'ワード', 0.7), (u'クラウド', 0.6)]
 easywordcloud.draw_word_cloud(words, width, height, 'examples/japanese.png', None)
