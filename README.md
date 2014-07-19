@@ -30,63 +30,46 @@ Install the package:
 
     sudo python setup.py install
 
-##How to draw a word cloud
-1. prepare the material. a list of word tuples.
+##How to draw a word cloud?
+prepare the a list of word tuples. and then call the function
+⋅⋅* English
 ```python
-words = [('hello', 3), ('world', 5)]
+text = open(path.join(d, 'examples/constitution.txt')).read()
+words = easywordcloud.process_text(text)
+easywordcloud.draw_word_cloud(words, width, height, 'examples/constitution.png')
 ```
-or
-```python
-words = [('hello', math.log(3)), ('world', math.log(5))]
-```
-2. prepare the fonts and then call the function.
-English:
-```python
-words = [('hello', 3), ('world', 5)]
-```
-Chinese:
-```python
-words = [('你好', 3), ('吗', 5)]
-```
-```python
-words = [('ひらがな', 3), ('Hiragana', 5)， ('히라가나', 5)]
-```
+output:
+![American Constitution](examples/constitution.png)
 
+```python
+text = open(path.join(d, 'examples/alice.txt')).read()
+words = easywordcloud.process_text(text)
+easywordcloud.draw_word_cloud(words, width, height,  'examples/alice.png', '/Library/Fonts/Andale Mono.ttf')
+```
+output:
+![Alice in Wonderland](examples/alice.png)
 
-## Examples
+⋅⋅* Chinese:
+```python
+words = [(u'标签', 3), (u'云', 2)]
+easywordcloud.draw_word_cloud(words, width, height,  'examples/chinese.png', None)
+```
+output:
+![Chinese](examples/chinese.png)
+
+⋅⋅* Japanness
+```python
+words = [(u'ワード', 0.7), (u'クラウド', 0.6)]
+easywordcloud.draw_word_cloud(words, width, height, 'examples/japannese.png', None)
+`output:
+![japanese](examples/japanese.png)``
+
+NOTE: **MAKE SURE THE FONT COVERS THE CHARACTERS YOU WANT TO DISPLAY**
+
 Note that if you are not on mac, you need to adjust FONT_PATH to point to
 some existing font.
 
-Check out [examples/simple.py][simple] for a short intro. A sample output is:
+Check out [examples/simple.py][simple] for a short intro. 
 
-![Constitution](examples/constitution.png)
-
-Or run [examples/more.py][more] to see more options. A sample output is:
-
-![Alice in Wonderland](examples/alice.png)
-
-## Used in
-
-### [other]
-
-*Send a pull request to add yours here.*
-
-## Issues
-
-Using Pillow instead of PIL might might get you the [`TypeError: 'int' object is
-not iterable` problem][intprob] also showcased on the blog.
-
-[blog-post]: http://peekaboo-vision.blogspot.de/2012/11/a-wordcloud-in-python.html
 [simple]: examples/simple.py
-[more]: examples/more.py
-[reddit-cloud]: https://github.com/amueller/reddit-cloud
-[wc2]: http://www.reddit.com/user/WordCloudBot2
-[wc2top]: http://www.reddit.com/user/WordCloudBot2/?sort=top
-[intprob]: http://peekaboo-vision.blogspot.de/2012/11/a-wordcloud-in-python.html#bc_0_28B
-
-
-todo:
-1.unicode support
-2.python 3 support
-3.
-
+  
