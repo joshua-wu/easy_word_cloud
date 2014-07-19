@@ -36,6 +36,7 @@ prepare the a list of word tuples. and then call the function
 ```python
 text = open(path.join(d, 'examples/constitution.txt')).read()
 words = easywordcloud.process_text(text)
+words = [(word, math.sqrt(weight)) for word, weight in words]  # to makes the weight more even
 easywordcloud.draw_word_cloud(words, width, height, 'examples/constitution.png')
 ```
 output:
@@ -66,8 +67,7 @@ output:
 ![japanese](examples/japanese.png)
 
 NOTE: **MAKE SURE THE FONT COVERS THE CHARACTERS YOU WANT TO DISPLAY**
-
-Note that if you are not on mac, you need to adjust FONT_PATH to point to
+If you are not on mac, you need to adjust FONT_PATH to point to
 some existing font.
 
 Check out [examples/simple.py][simple] for a short intro. 

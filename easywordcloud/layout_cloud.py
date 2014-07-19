@@ -69,7 +69,7 @@ def draw_word_cloud(words, width=800, height=600, output_file_name=None, font_pa
     best_score = 0
     best_elements = None
 
-    for font_scale in [0.1, 0.5, 1, 2, 5, 10, 20, 50]:
+    for font_scale in [0.1, 0.5, 1, 2, 5, 7, 10, 15, 20, 30, 50]:
         elements, score, fill_rate, show_rate = fit_words(
             words, width=width, height=height, margin=2, scale=font_scale)
         if debug >= 1:
