@@ -60,9 +60,9 @@ output:
 ⋅⋅* Japanness
 ```python
 words = [(u'ワード', 0.7), (u'クラウド', 0.6)]
-easywordcloud.draw_word_cloud(words, width, height, 'examples/japannese.png', None)
-`output:
-![japanese](examples/japanese.png)``
+easywordcloud.draw_word_cloud(words, width, height, 'examples/japanese.png', None)
+```output:
+![japanese](examples/japanese.png)
 
 NOTE: **MAKE SURE THE FONT COVERS THE CHARACTERS YOU WANT TO DISPLAY**
 

@@ -5,8 +5,8 @@ import easywordcloud
 
 d = path.dirname(__file__)
 
-width = 960
-height = 800
+width = 800
+height = 600
 best_elements = None
 best_score = 0
 
@@ -23,7 +23,7 @@ easywordcloud.draw_word_cloud(words, width, height, path.join(d, 'examples/alice
 
 #test case 3
 words = [(u'ワード', 0.7), (u'クラウド', 0.6)]
-easywordcloud.draw_word_cloud(words, width, height, path.join(d, 'examples/japannese.png'), '/Library/Fonts/Andale Mono.ttf')
+easywordcloud.draw_word_cloud(words, width, height, path.join(d, 'examples/japanese.png'), '/Library/Fonts/Andale Mono.ttf')
 
 
 words = [(u'标签', 3), (u'云', 2)]
