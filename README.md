@@ -1,13 +1,12 @@
 easy_word_cloud
 ==========
-##features
-Based on [word_cloud] and [word cloud generate], I created this easy word cloud. 
-1. easy to use. compare to word cloud, easy_word_cloud provide a simplier interface.
-2. more effcient. compare to word_cloud, easy_word_cloud is more effcient with bigger canvas.
-3. custom weight. for each word, the user can provide a weight( a weight can be the count of that word, or the percentage and so on ). the weight must greate than zeros. and there are no other constraint. so you can scale the weight to log scale 
-you can provide log(count) as a weight.
-4. font size is liner with weight. In order to provide a more reasonable figure, the weight is liner with the font size. 
-5. smart draw. to choice font size smart with regard to the size of word, weight of word, size of the canvas. 
+##Features
+Based on [word_cloud](https://github.com/amueller/word_cloud) and [word cloud generate](http://www.jasondavies.com/wordcloud/), I created this easy word cloud. 
+1. **Super easy to user**. Compared to word cloud, easy_word_cloud provide a simplier interface and you do not need to have cython.
+2. **More effcient**. Easy_word_cloud is more effcient with bigger canvas or a plenty of words.
+3. **Using weight instead of count**. You can set the weiht to whatever you want( e.g. the count of word, log(count of word) ) only if you ensure it great than 0.
+4. **font size is strict liner with weight**. In order to provide a more reasonable figure, the weight is liner with the font size. In [word_cloud](https://github.com/amueller/word_cloud), the size of two words are not compareable because it doest not maintain the linearity.  
+5. **Smart draw**. I design a algorithm to smart choice font size with regard to the size of word, weight distribution of word and size of the canvas. 
 
 ## Installation
 
