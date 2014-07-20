@@ -59,10 +59,10 @@ def process_text(text, max_features=200, stopwords=None):
     d3 = {}
     for d2 in d.values():
         # Get the most popular case.
-        first = sorted(d2.iteritems(), key=lambda x: x[1], reverse=True)[0][0]
+        first = sorted(d2.items(), key=lambda x: x[1], reverse=True)[0][0]
         d3[first] = sum(d2.values())
 
-    words = sorted(d3.iteritems(), key=lambda x: x[1], reverse=True)
+    words = sorted(d3.items(), key=lambda x: x[1], reverse=True)
     words = words[:max_features]
     maximum = float(max(d3.values()))
     for i, (word, count) in enumerate(words):
