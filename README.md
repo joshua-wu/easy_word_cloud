@@ -1,4 +1,4 @@
-easy_word_cloud
+easy word cloud
 ==========
 ##Features
 Based on [word_cloud](https://github.com/amueller/word_cloud) and [word cloud generate](http://www.jasondavies.com/wordcloud/), I created this easy word cloud. 
