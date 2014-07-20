@@ -8,10 +8,22 @@ import random
 import os
 import numpy as np
 import math
+import imp
 
-import Image
-import ImageDraw
-import ImageFont
+try:
+    imp.find_module('PIL')
+    found = True
+except ImportError:
+    found = False
+
+if found:
+    from PIL import Image
+    from PIL import ImageDraw
+    from PIL import ImageFont
+else:
+    import Image
+    import ImageDraw
+    import ImageFont
 
 debug = 0
 float_min = 1e-300
