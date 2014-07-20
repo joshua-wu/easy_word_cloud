@@ -6,10 +6,9 @@ Based on [word_cloud](https://github.com/amueller/word_cloud) and [word cloud ge
 1. **Super easy to user**. Compared to word cloud, easy_word_cloud provide a simplier interface and you do not need to have cython.
 2. **More effcient**. Easy_word_cloud is more effcient with bigger canvas or a plenty of words.
 3. **Using weight instead of count**. You can set the weiht to whatever you want( e.g. the count of word, log(count of word) ) only if you ensure it great than 0.
-
 4. **font size is strict liner with weight**. In order to provide a more reasonable figure, the weight is liner with the font size. In [word_cloud](https://github.com/amueller/word_cloud), the size of two words are not compareable because it doest not maintain the linearity.  
-
 5. **Smart draw**. I design a algorithm to smart choice font size with regard to the size of word, weight distribution of word and size of the canvas. 
+6. **Unicode and python2/3 support**.
 
 
 ## Installation
