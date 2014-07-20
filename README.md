@@ -33,6 +33,7 @@ Install the package:
 
 ##How to draw a word cloud?
 prepare the a list of word tuples. and then call the function
+
 **English**
 ```python
 text = open(path.join(d, 'examples/constitution.txt')).read()
