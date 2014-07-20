@@ -60,7 +60,10 @@ output:
 
 **Chinese**
 ```python
+#python2
 words = [(u'标签', 3), (u'云', 2)]
+#pyton3
+#words = [('标签', 3), ('云', 2)]
 easywordcloud.draw_word_cloud(words, width, height,  'examples/chinese.png', None)
 ```
 output:
@@ -68,7 +71,10 @@ output:
 
 **Japanness**
 ```python
+#python2
 words = [(u'ワード', 0.7), (u'クラウド', 0.6)]
+#python3
+#words = [('ワード', 0.7), ('クラウド', 0.6)]
 easywordcloud.draw_word_cloud(words, width, height, 'examples/japanese.png', None)
 ```
 output:
