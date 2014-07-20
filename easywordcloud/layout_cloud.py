@@ -29,7 +29,6 @@ debug = 0
 float_min = 1e-300
 
 from sys import platform as _platform
-from layout_cloud import *
 
 
 def get_default_font():

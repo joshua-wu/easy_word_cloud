@@ -6,5 +6,5 @@ setup(
     url='https://github.com/knightwu/easy_word_cloud',
     license='MIT',
     packages=['easywordcloud'],
-    package_data={'wordcloud': ['stopwords']}
+    package_data={'easywordcloud': ['stopwords']}
 )
