@@ -25,6 +25,7 @@ Otherwise, get this package:
 Install the requirements:
 
     sudo pip install -r requirements.txt
+If you are a windows user, you can download the package needed from [Unofficial Windows Binaries for Python Extension Packages](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
 Install the package:
 
@@ -77,4 +78,5 @@ some existing font.
 Check out [examples/simple.py][simple] for a short intro. 
 
 [simple]: examples/simple.py
+
   

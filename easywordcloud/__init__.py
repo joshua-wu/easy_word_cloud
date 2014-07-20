@@ -6,7 +6,7 @@
 #modified by wujian
 import os
 import re
-from layout_cloud import *
+from .layout_cloud import *
 
 
 STOPWORDS = set([x.strip() for x in open(os.path.join(os.path.dirname(__file__),
